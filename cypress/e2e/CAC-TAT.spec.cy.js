@@ -211,7 +211,6 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .invoke('val',longText)
       .should('have.value', longText)
 
-
   })
 
   it('faz uma requisicao HTTP', function(){
@@ -226,12 +225,13 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
   })
 
-  it.only('encontra o gato', function(){
+  it('encontra o gato', function(){
     cy.get('#cat')
     .invoke('show')
     .should('be.visible')
     cy.get('#title')
     .invoke('text', 'CAT TAT')
+
 
   })
 })
